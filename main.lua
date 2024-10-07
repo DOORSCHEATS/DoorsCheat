@@ -22,8 +22,10 @@ function SaveRooms()
 			for i, v in CloneRoom:GetDescendants() do
 				if v:IsA("BillboardGui") or v:IsA("Highlight") then
 					v:Destroy()
+				elseif v:IsA("Sound") then
+					v:Stop()
+					v.TimePosition = 0
 				end
-				task.wait(0.02)
 			end
 		end
 	end

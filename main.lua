@@ -1,3 +1,3 @@
-local Executor = identifyexecutor() or "Solara"
+local Executor = identifyexecutor()
 
 print(Executor)
